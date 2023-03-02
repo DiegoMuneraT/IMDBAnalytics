@@ -1,0 +1,42 @@
+from django.db import models
+#from filer.fields.file import FilerFileField
+
+# Create your models here.
+class Movie(models.Model):
+    color = models.CharField(max_length = 100,null=True)
+    director_name = models.CharField(max_length = 100,null=True)
+    num_critic_for_reviews = models.IntegerField(default = None,null=True)
+    duration = models.IntegerField(default = None,null=True)
+    director_facebook_likes = models.IntegerField(default = None,null=True)
+    actor_3_facebook_likes = models.IntegerField(default = None,null=True)
+    actor_2_name = models.CharField(max_length = 100,null=True)
+    actor_1_facebook_likes = models.IntegerField(default = None,null=True)
+    gross = models.IntegerField(default = None,null=True)
+    genres = models.CharField(max_length = 100,null=True)
+    actor_1_name = models.CharField(max_length = 100,null=True)
+    movie_title = models.CharField(max_length = 100,null=True)
+    num_voted_users = models.IntegerField(default = None,null=True)
+    cast_total_facebook_likes = models.IntegerField(default = None,null=True)
+    actor_3_name = models.CharField(max_length = 100,null=True)
+    facenumber_in_poster = models.IntegerField(default = None,null=True)
+    plot_keywords = models.CharField(max_length = 100,null=True)
+    movie_imdb_link = models.CharField(max_length = 100,null=True)
+    num_user_for_reviews = models.IntegerField(default = None,null=True)
+    language = models.CharField(max_length = 100,null=True)
+    country = models.CharField(max_length = 100,null=True)
+    content_rating = models.CharField(max_length = 100,null=True)
+    budget = models.IntegerField(default = None,null=True)
+    title_year = models.IntegerField(default = None,null=True)
+    actor_2_facebook_likes = models.IntegerField(default = None,null=True)
+    imdb_score = models.FloatField(default = None,null=True)
+    aspect_ratio = models.FloatField(default = None,null=True)
+    movie_facebook_likes = models.IntegerField(default = None,null=True)
+
+class Map(models.Model):
+    title = models.CharField(max_length=50)
+    file_cpg = models.FileField()
+    file_dbf = models.FileField()
+    file_prj = models.FileField()
+    file_shp = models.FileField()
+    file_shx = models.FileField()
+    file_version = models.FileField()
